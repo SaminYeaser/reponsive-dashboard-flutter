@@ -1,3 +1,5 @@
+import 'package:dashboard/screens/components/header.dart';
+import 'package:dashboard/screens/components/profileCard.dart';
 import 'package:dashboard/screens/components/textfieldSearch.dart';
 import 'package:dashboard/screens/constants.dart';
 import 'package:flutter/material.dart';
@@ -15,18 +17,7 @@ class DashboardScreen extends StatelessWidget {
         ),
         child: Column(
           children: [
-            Row(
-              children: [
-                Text(
-                  "DashBoard",
-                  style: Theme.of(context).textTheme.headline6,
-                ),
-                Spacer(),
-                Expanded(
-                  child: TextFieldSearch(),
-                )
-              ],
-            )
+            Header(),
           ],
         ),
       ),
