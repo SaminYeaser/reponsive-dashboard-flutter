@@ -1,9 +1,11 @@
+import 'package:dashboard/screens/components/charts.dart';
 import 'package:dashboard/screens/components/header.dart';
-import 'package:dashboard/screens/components/profileCard.dart';
-import 'package:dashboard/screens/components/textfieldSearch.dart';
+import 'package:dashboard/screens/pieCharts.dart';
+
 import 'package:dashboard/screens/constants.dart';
+import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+
 
 class DashboardScreen extends StatelessWidget {
   const DashboardScreen({Key? key}) : super(key: key);
@@ -18,6 +20,28 @@ class DashboardScreen extends StatelessWidget {
         child: Column(
           children: [
             Header(),
+            SizedBox(
+              height: 10,
+            ),
+            Row(
+              children: [
+                SizedBox(),
+                Expanded(
+                  flex: 5,
+                  child: Container(
+                    height: 500,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.white10,
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: defaultPadding,
+                ),
+                Charts(),
+              ],
+            )
           ],
         ),
       ),
