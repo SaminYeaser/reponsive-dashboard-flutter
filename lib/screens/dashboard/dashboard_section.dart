@@ -1,5 +1,7 @@
+import 'package:dashboard/screens/components/textfieldSearch.dart';
 import 'package:dashboard/screens/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class DashboardScreen extends StatelessWidget {
   const DashboardScreen({Key? key}) : super(key: key);
@@ -11,12 +13,20 @@ class DashboardScreen extends StatelessWidget {
         padding: EdgeInsets.all(
           defaultPadding,
         ),
-        child: Row(
+        child: Column(
           children: [
-            Text(
-              "DashBoard",
-              style: Theme.of(context).textTheme.headline6,
-            ),
+            Row(
+              children: [
+                Text(
+                  "DashBoard",
+                  style: Theme.of(context).textTheme.headline6,
+                ),
+                Spacer(),
+                Expanded(
+                  child: TextFieldSearch(),
+                )
+              ],
+            )
           ],
         ),
       ),

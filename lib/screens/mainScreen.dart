@@ -1,3 +1,4 @@
+import 'package:dashboard/screens/dashboard/dashboard_section.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -15,9 +16,7 @@ class MainScreen extends StatelessWidget {
             ),
             Expanded(
               flex: 5,
-              child: Container(
-                color: Colors.blue,
-              ),
+              child: DashboardScreen(),
             )
           ],
         ),
