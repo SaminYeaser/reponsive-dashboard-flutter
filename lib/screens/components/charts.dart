@@ -14,12 +14,12 @@ class Charts extends StatelessWidget {
     return Expanded(
       flex: 2,
       child: Container(
-        height: 500,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           color: secondaryColor,
         ),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
               padding: EdgeInsets.all(10),

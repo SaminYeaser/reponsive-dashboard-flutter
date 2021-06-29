@@ -18,7 +18,16 @@ class StorageInfoChart extends StatelessWidget {
             title: 'Media Files',
             amoutnOfFiles: '1.9 GB',
             numOfFiles: 2000),
-
+        StorageInfoCard(
+            svgSrc: 'assets/icons/Figma_file.svg',
+            title: 'Other Files',
+            amoutnOfFiles: '2.9 GB',
+            numOfFiles: 2600),
+        StorageInfoCard(
+            svgSrc: 'assets/icons/unknown.svg',
+            title: 'Unknown',
+            amoutnOfFiles: '1.1 GB',
+            numOfFiles: 500),
       ],
     );
   }

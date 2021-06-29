@@ -24,6 +24,7 @@ class DashboardScreen extends StatelessWidget {
               height: 10,
             ),
             Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(),
                 Expanded(
