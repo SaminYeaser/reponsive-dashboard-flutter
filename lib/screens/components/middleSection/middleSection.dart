@@ -1,3 +1,4 @@
+import 'package:dashboard/screens/components/middleSection/FourContainerSection.dart';
 import 'package:dashboard/screens/components/middleSection/middleSectionAddMore.dart';
 import 'package:dashboard/screens/constants.dart';
 import 'package:flutter/material.dart';
@@ -15,6 +16,10 @@ class MiddleSection extends StatelessWidget {
             height: defaultPadding,
           ),
           MiddleAddMore(),
+          SizedBox(
+            height: defaultPadding,
+          ),
+          FourContainer()
         ],
       ),
     );
