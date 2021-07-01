@@ -19,7 +19,10 @@ class MiddleSection extends StatelessWidget {
           SizedBox(
             height: defaultPadding,
           ),
-          FourContainer()
+          FourContainer(),
+          SizedBox(
+            height: defaultPadding,
+          ),
         ],
       ),
     );
