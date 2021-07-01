@@ -3,6 +3,8 @@ import 'package:dashboard/screens/components/middleSection/middleSectionAddMore.
 import 'package:dashboard/screens/constants.dart';
 import 'package:flutter/material.dart';
 
+import 'dataTable.dart';
+
 class MiddleSection extends StatelessWidget {
   const MiddleSection({Key? key}) : super(key: key);
 
@@ -23,6 +25,7 @@ class MiddleSection extends StatelessWidget {
           SizedBox(
             height: defaultPadding,
           ),
+          DataChart()
         ],
       ),
     );
