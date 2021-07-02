@@ -3,6 +3,9 @@ import 'package:dashboard/screens/components/middleSection/middleSectionAddMore.
 import 'package:dashboard/screens/constants.dart';
 import 'package:flutter/material.dart';
 
+import '../../responsiveness.dart';
+import '../charts.dart';
+import '../storageInfoData.dart';
 import 'dataTable.dart';
 
 class MiddleSection extends StatelessWidget {
@@ -10,24 +13,29 @@ class MiddleSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      flex: 5,
-      child: Column(
-        children: [
-          SizedBox(
-            height: defaultPadding,
-          ),
-          MiddleAddMore(),
-          SizedBox(
-            height: defaultPadding,
-          ),
-          FourContainer(),
-          SizedBox(
-            height: defaultPadding,
-          ),
-          DataChart()
-        ],
-      ),
+    return Column(
+      children: [
+        SizedBox(
+          height: defaultPadding,
+        ),
+        MiddleAddMore(),
+        SizedBox(
+          height: defaultPadding,
+        ),
+        FourContainer(),
+        SizedBox(
+          height: defaultPadding,
+        ),
+        DataChart(),
+        if(Responsive.isMobile(context))
+          SizedBox(height: defaultPadding,),
+        if(Responsive.isMobile(context))
+          Charts(),
+
+        if(Responsive.isMobile(context))
+          StorageInfoChart()
+      ],
+
     );
   }
 }

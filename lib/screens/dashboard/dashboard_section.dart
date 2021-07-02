@@ -2,9 +2,9 @@ import 'package:dashboard/screens/components/charts.dart';
 import 'package:dashboard/screens/components/header.dart';
 import 'package:dashboard/screens/components/middleSection/middleSection.dart';
 import 'package:dashboard/screens/constants.dart';
+import 'package:dashboard/screens/responsiveness.dart';
 
 import 'package:flutter/material.dart';
-
 
 class DashboardScreen extends StatelessWidget {
   const DashboardScreen({Key? key}) : super(key: key);
@@ -26,13 +26,16 @@ class DashboardScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(),
-                MiddleSection(),
-                SizedBox(
-                  width: defaultPadding,
+                Expanded(
+                  child: MiddleSection(),
+                  flex: 5,
                 ),
-                Charts(),
+                // if (!Responsive.isMobile(context))
+                //   SizedBox(
+                //     width: defaultPadding,
+                //   ),
               ],
-            )
+            ),
           ],
         ),
       ),
