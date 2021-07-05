@@ -1,6 +1,9 @@
+import 'package:dashboard/controllers/menuController.dart';
 import 'package:dashboard/screens/mainScreen.dart';
+import 'controllers/menuController.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'screens/constants.dart';
 
 void main() {
@@ -16,12 +19,17 @@ class MyApp extends StatelessWidget {
       title: 'Admin Panel',
       theme: ThemeData.dark().copyWith(
           scaffoldBackgroundColor: bgColor,
-          textTheme: GoogleFonts.poppinsTextTheme(Theme
-              .of(context)
-              .textTheme).apply(bodyColor: Colors.white),
-          canvasColor: secondaryColor
+          textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme)
+              .apply(bodyColor: Colors.white),
+          canvasColor: secondaryColor),
+      home: MultiProvider(
+        providers: [
+          ChangeNotifierProvider(
+            create: (context) => MenuController(),
+          )
+        ],
+        child: MainScreen(),
       ),
-      home: MainScreen(),
     );
   }
 }
